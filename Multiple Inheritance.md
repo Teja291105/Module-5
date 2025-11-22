@@ -32,14 +32,38 @@ To write a Python program to get the name, attendance, and ID of a student and c
 ### PROGRAM
 
 ```
-
+class stu:
+    def __init__(self, name):
+        self.name=name
+class att:
+    def __init__(self, id):
+        self.id=id
+class placement(stu, att):
+    def __init__(self, name, id, grade):
+        stu.__init__(self, name)
+        att.__init__(self, id)
+        self.grade=grade
+        
+    def display(self):
+        print(self.name)
+        print(self.id)
+        if self.grade > 90:
+            print("Eligible for Placement")
+        else:
+            print("Not Eligible for Placement")
+name=input()
+id=int(input())
+grade=int(input())
+obj=placement(name, id, grade)
+obj.display()
 ```
 
 ### OUTPUT
+<img width="702" height="292" alt="image" src="https://github.com/user-attachments/assets/4f1ec08d-f040-4ff9-b9cd-a585ece87b86" />
 
 
 ### RESULT
-
+Thus, program displays the student’s details and indicates whether they are eligible for placement based on attendance is verified successfully.
 
 
 
